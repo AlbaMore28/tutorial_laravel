@@ -21,12 +21,12 @@ Route::get('/', HomeController::class);
 */
 
 Route::controller(CursoController::class)->group(function(){
-    Route::get('cursos', 'index');
+    Route::get('cursos', 'index')->name('cursos.index');
     /*En laravel 7 se ponia asi:
         Route::get('cursos', 'CursoController@index');
     */
-    Route::get('cursos/create', 'create');
-    Route::get('cursos/{curso}', 'show');
+    Route::get('cursos/create', 'create')->name('cursos.create');
+    Route::get('cursos/{id}', 'show')->name('cursos.show');
 });
 
 /*Route::get('cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
