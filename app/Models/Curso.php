@@ -9,5 +9,9 @@ class Curso extends Model
 {
     use HasFactory;
 
+    //protected $fillable = ['name', 'descripcion', 'categoria'];
+
     //protected $table = "users"; administrar tabla sin crear convención
+
+    protected $guarded = [];
 }
