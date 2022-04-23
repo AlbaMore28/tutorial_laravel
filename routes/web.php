@@ -15,7 +15,7 @@ use App\Http\Controllers\CursoController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 /*En laravel 7 se ponia asi:
     Route::get('/', 'HomeController');
 */
@@ -49,3 +49,5 @@ Route::resource('cursos', CursoController::class);
         return "Bienvenido al curso: $curso";
     }
 });*/
+
+Route::view('nosotros', 'nosotros')->name('nosotros');
